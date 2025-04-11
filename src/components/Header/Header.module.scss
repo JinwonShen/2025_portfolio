@@ -1,3 +1,5 @@
+@use '../../styles/variables.module' as v;
+
 .header {
   position: fixed;
   left: calc((100% - 1080px) / 2);
@@ -8,6 +10,20 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @media (max-width: v.$breakpoint-tablet) {
+    left: 16px;
+    width: 200px;
+    padding: 48px 16px;
+  }
+
+  @media (max-width: v.$breakpoint-mobile) {
+    position: static;
+    width: 100%;
+    height: auto;
+    padding: 32px 16px;
+    border-right: none;
+  }
 
   .titleContainer {
     max-width: 368px;
