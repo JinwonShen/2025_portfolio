@@ -1,7 +1,27 @@
+'use client'
 import Link from 'next/link';
 import styles from './Header.module.scss';
+import { useState } from 'react';
 
 export default function Header() {
+  const [activeMenu, setActiveMenu] = useState<string | null>(null)
+
+  const handleScrollTo = (id: string) => {
+    const el = document.getElementById(id)
+    if (!el) return
+    el.scrollIntoView({ behavior: 'smooth' })
+  }
+
+  const handleClickMenu = (id: string) => {
+    if (activeMenu === id) {
+      setActiveMenu(null)
+    } else {
+      setActiveMenu(id)
+    }
+
+    handleScrollTo(id)
+  }
+
   return (
     <header className={styles.header}>
       <div className={styles.titleContainer}>
@@ -18,17 +38,23 @@ export default function Header() {
         프론트엔드 개발까지 연결하는 하이브리드형 인재입니다.
         </p>
       </div>
-      <nav>
-        <li>
-          <Link href="/about">About</Link>
-        </li>
-        <li>
-          <Link href="/projects">Projects</Link>
-        </li>
-        <li>
-          <Link href="/guestbook">GuestBook</Link>
-        </li>
-      </nav>
+      <ul className={styles.menu}>
+        {[
+          { id: 'about', label: 'About' },
+          { id: 'project', label: 'Project' },
+          { id: 'guestbook', label: 'GuestBook' },
+        ].map((menu) => (
+          <li
+            key={menu.id}
+            className={`${styles.menuItem} ${activeMenu === menu.id ? styles.active : ''}`}
+          >
+            <button type="button" onClick={() => handleClickMenu(menu.id)}>
+              {menu.label}
+            </button>
+            <Link href={`/${menu.id}`} className={styles.more}>more +</Link>
+          </li>
+        ))}
+      </ul>
     </header>
   );
 }

@@ -29,10 +29,34 @@
     }
   }
 
-  nav {
+  .menu {
     bottom: 96px;
     display: flex;
     flex-direction: column;
     gap: 12px;
+
+    .menuItem {
+      position: relative;
+
+      &:hover button {
+        font-weight: 500;
+      }
+
+      .more {
+        position: absolute;
+        padding-left: 12px;
+        opacity: 0;
+        transition: opacity 0.3s;
+        white-space: nowrap;
+      }
+
+      &:hover .more {
+        opacity: 0.5;
+      }
+
+      &.active .more {
+        opacity: 0.5;
+      }
+    }
   }
 }
