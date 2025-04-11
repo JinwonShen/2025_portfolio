@@ -14,6 +14,7 @@ export default function RootLayout({children}: { children: React.ReactNode}) {
   return (
     <html lang="ko">
       <body>
+        <div className={styles.gridLine}/>
         <div className={styles.wrapper}>
           <Header />
           <main>{children}</main>
