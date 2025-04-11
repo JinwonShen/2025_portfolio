@@ -1,5 +1,17 @@
-@use '../styles/reset.scss'
-
-// 폰트
+@use '../styles/reset.scss';
 
 // 색상
+
+
+// 폰트
+html {
+  font-size: 62.5%;
+
+  @media (max-width: 1079px) {
+    font-size: 56.25%;
+  }
+
+  @media (max-width: 803px) {
+    font-size: 50%;
+  }
+}

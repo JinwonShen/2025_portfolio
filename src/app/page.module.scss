@@ -1,3 +1,5 @@
+@use '../styles/variables.module.scss' as v;
+
 .container {
   position: absolute;
   right: 0;
@@ -8,15 +10,62 @@
   .about {
     padding-top: 96px;
     height: 500px;
+
+    h2 {
+      font-size: v.$font-xl;
+    }
+
+    p {
+      font-size: v.$font-base;
+    }
   }
 
   .project {
     padding-top: 96px;
     height: 500px;
+
+    h2 {
+      font-size: v.$font-xl;
+    }
+
+    p {
+      font-size: v.$font-base;
+    }
   }
 
   .guestbook {
     padding-top: 96px;
     height: 500px;
+
+    h2 {
+      font-size: v.$font-xl;
+    }
+
+    p {
+      font-size: v.$font-base;
+    }
+  }
+
+}
+
+@media (max-width: v.$breakpoint-tablet) {
+  .container {
+    right: calc((100% - 803px) / 2);
+    max-width: 527px;
+
+    .about, .project, .guestbook {
+      padding-top: 66px;
+    }
+  }
+}
+
+@media (max-width: v.$breakpoint-mobile) {
+  .container {
+    right: calc((100% - 527px) / 2);
+    max-width: 527px;
+
+    .about, .project, .guestbook {
+      padding-top: 48px;
+    }
   }
 }

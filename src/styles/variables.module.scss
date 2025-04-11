@@ -1,3 +1,14 @@
-$breakpoint-mobile: 767px;
-$breakpoint-tablet: 1023px;
-$breakpoint-desktop: 1024px;
+$breakpoint-mobile: 803px;
+$breakpoint-tablet: 1079px;
+$breakpoint-desktop: 1080px;
+
+$font-xs: 1.2rem;    // 12px
+$font-sm: 1.4rem;    // 14px
+$font-base: 1.6rem;  // 16px
+$font-lg: 2rem;    // 20px
+$font-xl: 2.4rem;      // 24px
+$font-xxl: 4.4rem;   // 44px (ex. 메인 타이틀)
+
+$font-weight-bold: 700;
+$font-weight-semibold: 500;
+$font-weight-regular: 400;

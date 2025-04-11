@@ -1,3 +1,5 @@
+@use '../styles/variables.module.scss' as v;
+
 .gridLine {
   position: fixed;
   top: 0;
@@ -11,9 +13,9 @@
   background-image: 
   repeating-linear-gradient(
     to right,
-    rgba(0, 0, 0, 0.1) 0 1px,
+    rgb(230, 230, 230) 0 1px,
     transparent 1px 252px,
-    rgba(0, 0, 0, 0.1) 252px 253px,
+    rgb(230, 230, 230) 252px 253px,
     transparent 253px 276px
   );
 
@@ -24,8 +26,25 @@
     right: 0;
     width: 1px;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgb(230, 230, 230);
   }
+
+  @media (max-width: v.$breakpoint-tablet) {
+    max-width: 803px;
+  }
+  @media (max-width: v.$breakpoint-mobile) {
+    max-width: 528px;
+    background-image: 
+    repeating-linear-gradient(
+      to right,
+      rgb(230, 230, 230) 0 1px,
+      transparent 1px 252px,
+      rgb(230, 230, 230) 252px 253px,
+      transparent 253px 276px
+    );
+  }
+
+
 }
 
 .wrapper {

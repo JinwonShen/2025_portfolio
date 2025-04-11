@@ -40,12 +40,12 @@ export default function Header() {
       </div>
       <ul className={styles.menu}>
         {[
-          { id: 'about', label: 'About' },
-          { id: 'project', label: 'Project' },
-          { id: 'guestbook', label: 'GuestBook' },
+          { id: 'about', label: 'About'},
+          { id: 'project', label: 'Project'},
+          { id: 'guestbook', label: 'GuestBook'},
         ].map((menu) => (
           <li
-            key={menu.id}
+            key={menu.id} 
             className={`${styles.menuItem} ${activeMenu === menu.id ? styles.active : ''}`}
           >
             <button type="button" onClick={() => handleClickMenu(menu.id)}>
