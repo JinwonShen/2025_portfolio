@@ -1,9 +1,9 @@
-import styles from './Footer.module.css';
+import styles from './Footer.module.scss';
 
 export default function Footer() {
   return (
     <footer className={styles.footer}>
-      © 2025 Jinwon. All rights reserved.
+      {/* © 2025 Jinwon. All rights reserved. */}
     </footer>
   );
 }

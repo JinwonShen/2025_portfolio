@@ -1,0 +1,38 @@
+.header {
+  position: fixed;
+  left: calc((100% - 1080px) / 2);
+  width: 100%;
+  max-width: 528px;
+  height: 100vh;
+  padding: 96px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .titleContainer {
+    max-width: 368px;
+
+    h1 {
+      font-size: 44px;
+      font-weight: 700;
+    }
+
+    h2 {
+      font-size: 20px;
+      font-weight: 500;
+      margin: 24px 0;
+    }
+
+    p {
+      font-size: 16px;
+      font-weight: 400;
+    }
+  }
+
+  nav {
+    bottom: 96px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+}

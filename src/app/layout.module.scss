@@ -1,0 +1,26 @@
+.wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  height: 100%;
+
+  background-image: 
+  repeating-linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.1) 0 1px,
+    transparent 1px 252px,
+    rgba(0, 0, 0, 0.1) 252px 253px,
+    transparent 253px 276px
+  );
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}
