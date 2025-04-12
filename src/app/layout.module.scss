@@ -32,6 +32,7 @@
   @media (max-width: v.$breakpoint-tablet) {
     max-width: 803px;
   }
+
   @media (max-width: v.$breakpoint-mobile) {
     max-width: 528px;
     background-image: 
@@ -41,10 +42,17 @@
       transparent 1px 252px,
       rgb(230, 230, 230) 252px 253px,
       transparent 253px 276px
-    );
+    )
   }
 
-
+  @media (max-width: v.$breakpoint-mobile-s) {
+    width: 100%;
+    max-width: none;
+    background-image: none;
+    &::after {
+      content: none;
+    }
+  }
 }
 
 .wrapper {
@@ -53,4 +61,16 @@
   max-width: 1080px;
   margin: 0 auto;
   height: 100vh;
+}
+
+.hamburgerWrap {
+  display: none;
+
+  @media (max-width: v.$breakpoint-mobile) {
+    display: block;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    z-index: 100;
+  }
 }
