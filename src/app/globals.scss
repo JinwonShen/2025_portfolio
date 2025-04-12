@@ -7,6 +7,11 @@
 html {
   font-size: 62.5%;
 
+  body {
+    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #333
+  }
+
   @media (max-width: 1079px) {
     font-size: 56.25%;
   }

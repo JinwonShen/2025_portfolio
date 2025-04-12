@@ -4,6 +4,12 @@ import Footer from "@/components/Footer/Footer";
 
 import styles from './layout.module.scss'
 import './globals.scss'
+import { Roboto } from 'next/font/google'
+
+const roboto = Roboto({
+  subsets: ['latin'],
+  weight: ['400', '500', '700']
+})
 
 export const metadata: Metadata = {
   title: "JINWON Portfolio",
@@ -13,7 +19,7 @@ export const metadata: Metadata = {
 export default function RootLayout({children}: { children: React.ReactNode }) {
   return (
     <html lang="ko">
-      <body>
+      <body className={roboto.className}>
         <div className={styles.gridLine}/>
         <div className={styles.wrapper}>
           <Header />
