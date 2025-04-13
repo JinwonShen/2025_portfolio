@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 2025 Portfolio
 
-## Getting Started
+프론트엔드 개발자 진원 포트폴리오 사이트입니다.
+Next.js App Router 기반으로 제작 진행 중입니다.
 
-First, run the development server:
+## 기술 스택
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- Next.js 14 (App Router)
+- TypeScript
+- SCSS (module 방식)
+- CSS Variables
+- Biome (code format & lint)
+
+## 폴더 구조
+
+```
+src/
+├── app/         # 페이지 & 레이아웃 구성
+├── components/  # 컴포넌트 모듈화
+├── styles/      # 전역 스타일, 변수, reset
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 주요 개발 내용
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| 구분     | 설명                                 |
+| -------- | ------------------------------------ |
+| 레이아웃 | Header / Content / Footer 분리       |
+| Header   | Title, Menu, Links 로 컴포넌트 설계  |
+| 반응형   | 모바일/테블릿 대응 진행중            |
+| 폰트     | exo, exo2, IBM 사용                  |
+| 스타일링 | rem 기반 폰트 크기 관리, SCSS 변수화 |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 앞으로 진행할 작업
 
-## Learn More
+- Mobile Menu 디자인 개선
+- Header 메뉴 hover, active 처리
+- 페이지별 상세 UI 작업
+- Animation 및 Interaction 추가
+- 프로젝트 상세 페이지 작업
+- GuestBook UI 설계
 
-To learn more about Next.js, take a look at the following resources:
+## Git 커밋 컨벤션
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Prefix   | 설명           |
+| -------- | -------------- |
+| feat     | 기능 추가      |
+| fix      | 버그 수정      |
+| style    | 스타일 변경    |
+| refactor | 리팩토링       |
+| chore    | 기타 설정 작업 |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 프로젝트 설치 & 실행
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm install
+npm run dev
+```

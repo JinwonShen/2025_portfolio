@@ -1,0 +1,13 @@
+@use '../../styles/variables.module.scss' as var;
+
+.menuContainer ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.menuContainer ul li {
+  font-family: var.$font-sub-title;
+  font-weight: 500;
+  font-size: 1rem;
+}

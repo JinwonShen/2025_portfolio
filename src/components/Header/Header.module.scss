@@ -1,0 +1,12 @@
+.headerContainer {
+  position: fixed;
+  width: 50%;
+  max-width: 540px;
+  left: calc((100% - 1080px) / 2);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 96px 0;
+  z-index: 1000;
+}

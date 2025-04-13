@@ -1,22 +1,19 @@
 @use '../styles/reset.scss';
+@use '../styles/variables.module.scss' as v;
 
-// 색상
+:root {
+  --font-ibm: 'IBM Plex Sans KR', sans-serif;
+  --font-kanit: 'Kanit', sans-serif;
+  --font-exo2: 'Exo 2', sans-serif;
+}
 
-
-// 폰트
 html {
-  font-size: 62.5%;
+  font-size: clamp(12px, 1.5vw, 16px);
+}
 
-  body {
-    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    color: #333
-  }
-
-  @media (max-width: 1079px) {
-    font-size: 56.25%;
-  }
-
-  @media (max-width: 803px) {
-    font-size: 50%;
-  }
+body {
+  width: 100%;
+  height: 100%;
+  line-height: 1.6;
+  color: #333;
 }

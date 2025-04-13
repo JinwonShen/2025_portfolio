@@ -1,76 +1,10 @@
 @use '../styles/variables.module.scss' as v;
 
-.gridLine {
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  max-width: 1080px;
-  height: 100vh;
-  z-index: 0;
-  pointer-events: none;
-  background-image: 
-  repeating-linear-gradient(
-    to right,
-    rgb(230, 230, 230) 0 1px,
-    transparent 1px 252px,
-    rgb(230, 230, 230) 252px 253px,
-    transparent 253px 276px
-  );
-
-  &::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 1px;
-    height: 100%;
-    background-color: rgb(230, 230, 230);
-  }
-
-  @media (max-width: v.$breakpoint-tablet) {
-    max-width: 803px;
-  }
-
-  @media (max-width: v.$breakpoint-mobile) {
-    max-width: 528px;
-    background-image: 
-    repeating-linear-gradient(
-      to right,
-      rgb(230, 230, 230) 0 1px,
-      transparent 1px 252px,
-      rgb(230, 230, 230) 252px 253px,
-      transparent 253px 276px
-    )
-  }
-
-  @media (max-width: v.$breakpoint-mobile-s) {
-    width: 100%;
-    max-width: none;
-    background-image: none;
-    &::after {
-      content: none;
-    }
-  }
-}
-
 .wrapper {
   position: relative;
   width: 100%;
   max-width: 1080px;
-  margin: 0 auto;
-  height: 100vh;
-}
-
-.hamburgerWrap {
-  display: none;
-
-  @media (max-width: v.$breakpoint-mobile) {
-    display: block;
-    position: absolute;
-    top: 2rem;
-    right: 2rem;
-    z-index: 100;
-  }
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
 }

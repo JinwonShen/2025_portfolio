@@ -1,0 +1,43 @@
+
+.socialContainer {
+  position: absolute;
+  top: 24px;
+  // right: calc((100% - 1080px) / 2);
+  right: 0;
+  z-index: 100;
+
+  ul {
+    display: flex;
+
+    li {
+      margin: 0 6px;
+
+      a {
+        width: 36px;
+        height: 36px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .icon path {
+          fill: currentColor;
+          transition: all 0.3s ease;
+        }
+        
+        .icon {
+          width: 24px;
+          height: 24px;
+          color: #333;
+          // background-color: #333;
+        
+          &:hover {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  
+}
+

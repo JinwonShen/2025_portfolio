@@ -1,0 +1,63 @@
+@use '../../styles/variables.module.scss' as var;
+
+.aboutContainer {
+  padding: 96px 0;
+
+  h1, h2 {
+    font-family: var.$font-title;
+    font-size: 1.5rem;
+    margin-bottom: 24px;
+  }
+
+  p, span {
+    font-family: var.$font-body;
+    font-size: 1rem;
+  }
+
+  .workCont {
+    margin: 48px 0;
+
+    div {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    > span {
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+      opacity: 0.5;
+      font-size: 0.9rem;
+    }
+  }
+
+  .skillsCont {
+
+    .iconCont {
+      display: flex;
+      gap: 12px;
+
+      .icon path {
+        fill: currentColor;
+      }
+  
+      .iconBox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 36px;
+        height: 36px;
+        background-color: #fff;
+        border-radius: 8px;
+        z-index: 1;
+        
+        .icon {
+          width: 24px;
+          height: 24px;
+          color: #333;
+          z-index: 2;
+        }
+      }
+    }
+  }
+}
