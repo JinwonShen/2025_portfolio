@@ -1,15 +1,18 @@
 import styles from './About.module.scss'
+import Link from 'next/link'
 
 export default function About() {
   return (
     <section className={styles.aboutContainer}>
       <div className={styles.aboutCont}>
-        <h1>About</h1>
+        <h1>
+          <Link href='/about'>About</Link>
+        </h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem ipsum dolor sit. Volutpat odio facilisis mauris sit amet massa.
+          에이전시의 디자이너로 일하면서 주로 기업 사이트의 <span>유지보수와 컨텐츠 관리</span> 업무를 주로 담당했습니다. 간단한 가이드를 <span>퍼블리싱</span>하거나 <span>온/오프라인 광고 배너</span>를 제작하고, <span>사이트의 오류 검수</span> 같은 운영업무를 통해 웹 전반의 흐름과 구조를 자연스럽게 이해할 수 있게 되었고, 그 과정에서 프론트엔드 개발에 관심을 가지게 되었습니다.
           <br />
           <br />
-          Elit at imperdiet dui accumsan sit. Ornare arcu dui vivamus arcu felis. Egestas integer eget aliquet nibh praesent. In hac habitasse platea dictumst quisque sagittis purus. Pulvinar elementum integer enim neque volutpat ac.
+          화려한 비주얼 보다는 <span>사용자 중심의 UI와 사소한 디테일</span>을 좋아하고, 마이크로 애니메이션과 같이 <span>사용자의 경험을 조금 더 좋게</span> 만드는 것에 관심이 많습니다. 디자인 업무 덕분에 <span>다양한 툴 사용</span>에도 익숙하고, 디자이너와 개발자 사이의 <span>원활한 소통을 강점</span>이라고 할 수 있습니다.
         </p>
       </div>
       <div className={styles.workCont}>
