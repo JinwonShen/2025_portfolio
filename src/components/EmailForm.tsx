@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import { useRouter } from 'next/navigation'
 import styles from './EmailForm.module.scss'
 
 export default function EmailForm() {
@@ -9,12 +8,37 @@ export default function EmailForm() {
   const [email, setEmail] = useState('')
   const [name, setName] = useState('')
   const [message, setMessage] = useState('')
-  const router = useRouter()
+  const [successMessage, setSuccessMessage] = useState(false)
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    console.log('입력된 이메일:', email)
-    router.push('/success') // 원하는 경로로 이동
+  
+    const res = await fetch('https://formsubmit.co/ajax/bosv031999@gmail.com', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({
+        name,
+        email,
+        message,
+      }),
+    })
+  
+    if (res.ok) {
+      setSuccessMessage(true)
+      setName('')
+      setEmail('')
+      setMessage('')
+
+      setTimeout(() => {
+        setSuccessMessage(false)
+        setShowForm(false)
+      }, 2000)
+    } else {
+      alert('전송 실패! 다시 시도해주세요.')
+    }
   }
 
   return (
@@ -35,7 +59,7 @@ export default function EmailForm() {
 
       {/* 이메일 폼 */}
       {showForm && (
-        <form onSubmit={handleSubmit} className={styles.form}>
+        <form onSubmit={handleSubmit} className={styles.form} action={"https://formsubmit.co/bosv031999@gmail.com"} method="POST">
           {/* 닫기 버튼 */}
           <button
             type="button"
@@ -52,6 +76,7 @@ export default function EmailForm() {
           </label>
           <input
             id="name"
+            name='email'
             type="text"
             placeholder="이름을 입력하세요"
             value={name}
@@ -65,6 +90,7 @@ export default function EmailForm() {
           </label>
           <input
             id="email"
+            name='email'
             type="email"
             placeholder="example@email.com"
             value={email}
@@ -78,6 +104,7 @@ export default function EmailForm() {
           </label>
           <textarea
             id="message"
+            name='message'
             placeholder="메시지를 입력하세요"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
@@ -86,8 +113,12 @@ export default function EmailForm() {
           />
 
           <button type="submit" className={styles.submitButton}>
-            제 출
+            전 송
           </button>
+
+          {successMessage && (
+            <div className={styles.successMessage}>🙇🏻 메일이 성공적으로 전송되었습니다!</div>
+          )}
         </form>
       )}
     </div>
