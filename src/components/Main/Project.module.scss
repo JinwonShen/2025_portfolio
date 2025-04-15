@@ -61,7 +61,7 @@
         height: auto;
         margin-bottom: 24px;
     
-        a {
+        .imgBox {
           position: relative;
           display: block;
           width: 100%;
@@ -82,17 +82,31 @@
           border-radius: 8px;
           background-color: rgba(51,51,51,0.15); // 딤처리
           display: flex;
+          flex-direction: column;
           justify-content: center;
           align-items: center;
+          // align-items: flex-start;
           color: #fff;
           font-size: 1.6rem;
           opacity: 0;
           transition: 0.3s;
         
-          span {
+          a {
+            padding: 12px;
             font-family: var.$font-title;
             transform: translateY(10px);
             transition: all 0.3s;
+            &::after {
+              content: ' ↩︎';
+              opacity: 0;
+            }
+
+            &:hover {
+              color: #333;
+              &::after {
+              opacity: 1;
+            }
+            }
           }
         }
         

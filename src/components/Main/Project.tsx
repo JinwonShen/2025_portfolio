@@ -11,7 +11,7 @@ export default function Project() {
       <div className={styles.projectCont}>
         <div className={styles.project}>
           <div className={styles.imgCont}>
-            <Link href={'https://algorithm-9r06nuwrx-jinwonshens-projects.vercel.app/'} target='_blank'>
+            <div className={styles.imgBox}>
               <Image 
               src="/images/project/project-algonote.png" 
               alt="Portfolio" 
@@ -21,9 +21,10 @@ export default function Project() {
               style={{ width: '100%', height: 'auto', objectFit: 'cover' }}
               />
               <div className={styles.hoverLayer}>
-                <span>Visit</span>
+                <Link href={'/'}>Visit</Link>
+                <Link href={'/'}>github</Link>
               </div>
-            </Link>
+            </div>
           </div>
           <div className={styles.info}>
             <h2>알고리즘 앱 (AlgoNote)</h2>
@@ -41,7 +42,7 @@ export default function Project() {
         </div>
         <div className={styles.project}>
           <div className={styles.imgCont}>
-            <Link href={'/'} target='_blank'>
+            <div className={styles.imgBox}>
               <Image 
               src="/images/project/project-portfolio.png" 
               alt="Portfolio" 
@@ -51,9 +52,10 @@ export default function Project() {
               style={{ width: '100%', height: 'auto', objectFit: 'cover' }}
               />
               <div className={styles.hoverLayer}>
-                <span>Visit</span>
+                <Link href={'/'}>Visit</Link>
+                <Link href={'/'}>github</Link>
               </div>
-            </Link>
+            </div>
           </div>
           <div className={styles.info}>
             <h2>포트폴리오</h2>
