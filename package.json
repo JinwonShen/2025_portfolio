@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@next/font": "^14.2.15",
+    "@studio-freight/lenis": "^1.0.42",
     "next": "15.3.0",
     "prettier": "^3.5.3",
     "react": "^19.0.0",

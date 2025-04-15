@@ -22,7 +22,7 @@ export default function Project() {
               />
               <div className={styles.hoverLayer}>
                 <Link href={'/'}>Visit</Link>
-                <Link href={'/'}>github</Link>
+                <Link href={'https://github.com/JinwonShen/2025_portfoliio'}>github</Link>
               </div>
             </div>
           </div>

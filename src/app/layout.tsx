@@ -6,6 +6,7 @@ import { AnimatedGradient } from "@/app/AnimatedGradient";
 import { IBM_Plex_Sans_KR, Exo, Exo_2  } from 'next/font/google'
 import Header from "@/components/Header/Header";
 import Social from "@/components/Social";
+import LenisProvider from "@/hooks/useLenis";
 
 // body
 const ibm = IBM_Plex_Sans_KR({
@@ -40,6 +41,7 @@ export default function RootLayout({children}: { children: React.ReactNode }) {
   return (
     <html lang="ko" className={`${ibm.variable} ${exo.variable} ${exo2.variable}`}>
       <body>
+        <LenisProvider />
         <AnimatedGradient />
         <Header />
         <div className={styles.wrapper}>
