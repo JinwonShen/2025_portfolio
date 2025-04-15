@@ -43,7 +43,7 @@ export default function RootLayout({children}: { children: React.ReactNode }) {
         <AnimatedGradient />
         <Header />
         <div className={styles.wrapper}>
-        <Social />
+          <Social />
           <main>{children}</main>
         </div>
       </body>

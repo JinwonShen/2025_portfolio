@@ -4,10 +4,10 @@ import Link from 'next/link';
 
 export default function Project() {
   return (
-    <div className={styles.projectContainer}>
-      <Link href={'/'}>
-        <h1>Project</h1>
-      </Link>
+    <section className={styles.projectContainer} id="project">
+      <h1>
+        Project
+      </h1>
       <div className={styles.projectCont}>
         <div className={styles.project}>
           <div className={styles.imgCont}>
@@ -67,6 +67,6 @@ export default function Project() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

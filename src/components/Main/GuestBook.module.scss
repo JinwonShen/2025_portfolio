@@ -1,0 +1,85 @@
+@use '../../styles/variables.module.scss' as var;
+
+.guestbook {
+  padding: 96px 0 72px;
+
+  > p {
+    margin-bottom: 12px;
+    font-family: var.$font-body;
+    font-size: 0.9rem;
+  }
+
+  .formContainer {
+    display: flex;
+    flex-direction: column;
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      background-color: rgba(255, 255, 255, 0.5);
+      font-family: var.$font-body;
+      font-size: 0.75rem;
+    }
+
+    textarea {
+      margin: 12px 0;
+      min-height: 100px;
+    }
+
+    button {
+      padding: 12px;
+      border-radius: 8px;
+      background-color: #333;
+      color: #fff;
+      font-family: var.$font-body;
+      font-weight: 600;
+      margin-bottom: 12px;
+      transition: all 0.3s;
+
+      &:hover {
+        color: #333;
+        background-color: #fff;
+      }
+    }
+  }
+
+  .guestList {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      width: calc(50% - 6px);
+      padding: 24px;
+      background-color: rgba(255, 255, 255, 0.5);
+      border-radius: 8px;
+
+      h3 {
+        font-family: var.$font-body;
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: 12px;
+      }
+
+      p {
+        padding-bottom: 12px;
+      }
+
+      p, span {
+        font-family: var.$font-body;
+        font-size: 0.9rem;
+      }
+
+      .meta {
+        width: 100%;
+        padding-top: 6px;
+        margin-top: auto;
+        border-top: 1px solid #333;
+      }
+    }
+  }
+}

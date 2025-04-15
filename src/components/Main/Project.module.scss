@@ -1,7 +1,7 @@
 @use '../../styles/variables.module.scss' as var;
 
 .projectContainer {
-  padding-bottom: 96px;
+  padding-top: 96px;
 
   h1 {
     font-family: var.$font-title;
@@ -80,7 +80,7 @@
           width: 100%;
           height: 100%;
           border-radius: 8px;
-          background-color: rgba(0,0,0,0.15); // 딤처리
+          background-color: rgba(51,51,51,0.15); // 딤처리
           display: flex;
           justify-content: center;
           align-items: center;

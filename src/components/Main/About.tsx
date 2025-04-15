@@ -1,12 +1,11 @@
 import styles from './About.module.scss'
-import Link from 'next/link'
 
 export default function About() {
   return (
-    <section className={styles.aboutContainer}>
+    <section className={styles.aboutContainer} id='about'>
       <div className={styles.aboutCont}>
         <h1>
-          <Link href='/about'>About</Link>
+          About
         </h1>
         <p>
           에이전시의 디자이너로 일하면서 주로 기업 사이트의 <span>유지보수와 컨텐츠 관리</span> 업무를 주로 담당했습니다. 간단한 가이드를 <span>퍼블리싱</span>하거나 <span>온/오프라인 광고 배너</span>를 제작하고, <span>사이트의 오류 검수</span> 같은 운영업무를 통해 웹 전반의 흐름과 구조를 자연스럽게 이해할 수 있게 되었고, 그 과정에서 프론트엔드 개발에 관심을 가지게 되었습니다.
