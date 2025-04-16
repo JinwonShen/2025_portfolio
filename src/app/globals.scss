@@ -9,11 +9,12 @@
 
 html {
   font-size: clamp(12px, 1.5vw, 16px);
+  overflow-x: hidden;
 }
 
 body {
   width: 100%;
-  max-width: 100%;
+  max-width: 100vw;
   overflow-x: hidden;
   height: 100%;
   line-height: 1.6;
