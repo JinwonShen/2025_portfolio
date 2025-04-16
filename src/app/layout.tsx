@@ -32,14 +32,23 @@ const exo2 = Exo_2({
 })
 
 export const metadata: Metadata = {
-  title: "JINWON Portfolio",
-  description: "Frontend Engineer JINWON SHEN",
+  title: "JINWON SHEN - Frontend Engineer",
+  description: "프론트엔드 개발자 JINWON SHEN의 포트폴리오 사이트입니다.",
+  keywords: ["JINWON SHEN", "포트폴리오", "프론트엔드 개발자", "Frontend Developer", "Frontend Engineer"],
+  authors: [{ name: "Jinwon Shen" }],
 }
 
 export default function RootLayout({children}: { children: React.ReactNode }) {
 
   return (
     <html lang="ko" className={`${ibm.variable} ${exo.variable} ${exo2.variable}`}>
+      <head>
+      <meta property="og:title" content="JINWON SHEN - Frontend Engineer" />
+      <meta property="og:description" content="프론트엔드 개발자 JINWON SHEN의 포트폴리오입니다." />
+      <meta property="og:image" content="https://your-domain.com/og-image.png" />
+      <meta property="og:url" content="https://jinwonshen.vercel.app/" />
+      <meta name="twitter:card" content="summary_large_image" />
+      </head>
       <body>
         <LenisProvider />
         <AnimatedGradient />
