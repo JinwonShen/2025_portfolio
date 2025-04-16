@@ -39,10 +39,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: "JINWON SHEN - Frontend Engineer",
     description: "프론트엔드 개발자 JINWON SHEN의 포트폴리오입니다.",
-    url: "https://jinwonshen.vercel.app",
+    url: "https://jinwondev.vercel.app",
     images: [
       {
-        url: "https://jinwonshen.vercel.app/og-image.png",
+        url: "https://jinwondev.vercel.app/og-image.png",
         width: 1200,
         height: 630,
         alt: "Jinwon Shen Portfolio",
@@ -54,9 +54,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "JINWON SHEN - Frontend Engineer",
     description: "프론트엔드 개발자 JINWON SHEN의 포트폴리오입니다.",
-    images: ["https://jinwonshen.vercel.app/og-image.png"],
+    images: ["https://jinwondev.vercel.app/og-image.png"],
   },
-  metadataBase: new URL("https://jinwonshen.vercel.app"),
+  metadataBase: new URL("https://jinwondev.vercel.app"),
 }
 
 export default function RootLayout({children}: { children: React.ReactNode }) {
