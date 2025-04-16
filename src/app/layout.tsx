@@ -44,8 +44,8 @@ export default function RootLayout({children}: { children: React.ReactNode }) {
         <LenisProvider />
         <AnimatedGradient />
         <Header />
+        <Social />
         <div className={styles.wrapper}>
-          <Social />
           <main>{children}</main>
         </div>
       </body>

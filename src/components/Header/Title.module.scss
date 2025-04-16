@@ -18,3 +18,9 @@
   font-size: 1rem;
   padding-right: 96px;
 }
+
+@media (max-width: var.$breakpoint-tablet) {
+  .titleContainer p {
+    padding-right: 3rem;
+  }
+}

@@ -83,3 +83,19 @@
     }
   }
 }
+
+
+@media (max-width: var.$breakpoint-tablet) {
+  .guestbook {
+    padding: 96px 48px;
+  }
+}
+
+@media (max-width: var.$breakpoint-mobile-min) {
+  .guestList {
+    flex-direction: row;
+    .card {
+      flex: 1;
+    }
+  }
+}

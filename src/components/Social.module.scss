@@ -1,9 +1,10 @@
+@use '../styles/variables.module.scss' as var;
 
 .socialContainer {
   position: absolute;
   top: 24px;
-  // right: calc((100% - 1080px) / 2);
-  right: 0;
+  right: calc((100% - 1080px) / 2);
+  // right: 0;
   z-index: 100;
 
   ul {
@@ -37,7 +38,27 @@
       }
     }
   }
+}
 
-  
+@media (max-width: var.$breakpoint-tablet) {
+  .socialContainer {
+    position: relative;
+    left: 40px;
+    z-index: 1000;
+
+    ul {  
+      li {  
+        a {
+          width: 28px;
+          height: 28px;  
+          
+          .icon {
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+    }
+  }
 }
 

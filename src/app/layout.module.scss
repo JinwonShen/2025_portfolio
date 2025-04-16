@@ -1,4 +1,4 @@
-@use '../styles/variables.module.scss' as v;
+@use '../styles/variables.module.scss' as var;
 
 .wrapper {
   position: relative;
@@ -7,4 +7,11 @@
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
+}
+
+@media (max-width: var.$breakpoint-tablet) {
+  .wrapper {
+    left: 0;
+    transform: none;
+  }
 }

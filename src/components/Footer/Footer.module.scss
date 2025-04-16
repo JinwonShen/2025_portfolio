@@ -35,3 +35,9 @@
     }
   }
 }
+
+@media (max-width: var.$breakpoint-tablet) {
+  .footerContainer {
+    padding: 0 48px 24px;
+  }
+}

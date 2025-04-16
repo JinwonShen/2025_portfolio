@@ -1,12 +1,25 @@
+@use '../../styles/variables.module.scss' as var;
+
 .headerContainer {
   position: fixed;
-  width: 50%;
-  max-width: 540px;
-  left: calc((100% - 1080px) / 2);
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  max-width: 540px;
+  width: 50%;
+  height: 100vh;
+  left: calc((100% - 1080px) / 2);
   padding: 96px 0;
   z-index: 1000;
+}
+
+@media (max-width: var.$breakpoint-tablet) {
+  .headerContainer {
+    position: relative;
+    width: 100%;
+    max-width: none;
+    left: 0;
+    height: auto;
+    padding: 96px 48px 0;
+  }
 }

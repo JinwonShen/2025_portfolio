@@ -1,19 +1,42 @@
 @use '../../styles/variables.module.scss' as var;
 
-.menuContainer ul {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+.menuContainer {
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  
+    li {
+      button {
+        font-family: var.$font-sub-title;
+        font-weight: 500;
+        font-size: 1rem;
+        transition: all 0.3s;
+        color: #333;
+    
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
 
-  li button {
-    font-family: var.$font-sub-title;
-    font-weight: 500;
-    font-size: 1rem;
-    transition: all 0.3s;
-    color: #333;
+@media (max-width: var.$breakpoint-tablet) {
+  .menuContainer {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    left: 0;
+    top: 0;
+    padding: 12px 0;
+    // background-color: rgba(51, 51, 51, 0.1);
+    backdrop-filter: blur(10px);
 
-    &:hover {
-      color: #fff;
+    ul {
+      flex-direction: row;
+      gap: 24px;
     }
   }
 }
