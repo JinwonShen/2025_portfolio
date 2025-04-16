@@ -2,6 +2,8 @@
 
 import styles from './GuestBook.module.scss'
 import { useState, useEffect } from 'react'
+import { collection, addDoc, getDocs, Timestamp } from 'firebase/firestore'
+import { db } from '@/llb/Firebase'
 
 type Guest = {
   id: string
@@ -10,33 +12,49 @@ type Guest = {
   date: string
 }
 
+const loadGuestbook = async (setGuests: React.Dispatch<React.SetStateAction<Guest[]>>) => {
+  const snapshot = await getDocs(collection(db, 'guestbook'))
+  const data: Guest[] = snapshot.docs.map(doc => ({
+    id: doc.id,
+    ...doc.data(),
+  })) as Guest[]
+
+  const formatted = data.map(d => {
+    const rawDate = d.date as unknown
+    return {
+      ...d,
+      date: rawDate instanceof Timestamp
+      ? rawDate.toDate().toISOString().split('T')[0]
+      : String(rawDate),
+    }
+  }) as Guest[]
+
+  setGuests(formatted.reverse()) // 최신순으로 정렬
+}
+
 export default function GuestBook() {
   const [guests, setGuests] = useState<Guest[]>([])
   const [name, setName] = useState('')
   const [message, setMessage] = useState('')
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    if(!name || !message) return
+    if (!name || !message) return
 
-    const newGuest: Guest = {
-      id: Date.now().toString(),
+    const docRef = await addDoc(collection(db, 'guestbook'), {
       name,
       message,
-      date: new Date().toISOString().split('T')[0]
-    }
-
-    const updatedGuests = [newGuest, ...guests]
-    setGuests(updatedGuests)
-    localStorage.setItem('guestbook', JSON.stringify(updatedGuests))
+      date: Timestamp.now(),
+    })
+    console.log("Document written with ID: ", docRef.id)
 
     setName('')
     setMessage('')
+    loadGuestbook(setGuests)
   }
 
   useEffect(() => {
-    const stored = localStorage.getItem('guestbook')
-    if (stored) setGuests(JSON.parse(stored))
+    loadGuestbook(setGuests)
   }, [])
 
   return (
