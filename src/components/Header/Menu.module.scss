@@ -27,11 +27,13 @@
     position: fixed;
     display: flex;
     justify-content: center;
-    width: 100%;
+    width: 100vw;
     left: 0;
     top: 0;
     padding: 12px 0;
+    box-sizing: border-box;
     backdrop-filter: blur(10px);
+    z-index: 100;
 
     ul {
       flex-direction: row;
