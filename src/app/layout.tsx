@@ -36,19 +36,33 @@ export const metadata: Metadata = {
   description: "프론트엔드 개발자 JINWON SHEN의 포트폴리오 사이트입니다.",
   keywords: ["JINWON SHEN", "포트폴리오", "프론트엔드 개발자", "Frontend Developer", "Frontend Engineer"],
   authors: [{ name: "Jinwon Shen" }],
+  openGraph: {
+    title: "JINWON SHEN - Frontend Engineer",
+    description: "프론트엔드 개발자 JINWON SHEN의 포트폴리오입니다.",
+    url: "https://jinwonshen.vercel.app",
+    images: [
+      {
+        url: "https://jinwonshen.vercel.app/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Jinwon Shen Portfolio",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "JINWON SHEN - Frontend Engineer",
+    description: "프론트엔드 개발자 JINWON SHEN의 포트폴리오입니다.",
+    images: ["https://jinwonshen.vercel.app/og-image.png"],
+  },
+  metadataBase: new URL("https://jinwonshen.vercel.app"),
 }
 
 export default function RootLayout({children}: { children: React.ReactNode }) {
 
   return (
     <html lang="ko" className={`${ibm.variable} ${exo.variable} ${exo2.variable}`}>
-      <head>
-      <meta property="og:title" content="JINWON SHEN - Frontend Engineer" />
-      <meta property="og:description" content="프론트엔드 개발자 JINWON SHEN의 포트폴리오입니다." />
-      <meta property="og:image" content="https://your-domain.com/og-image.png" />
-      <meta property="og:url" content="https://jinwonshen.vercel.app/" />
-      <meta name="twitter:card" content="summary_large_image" />
-      </head>
       <body>
         <LenisProvider />
         <AnimatedGradient />

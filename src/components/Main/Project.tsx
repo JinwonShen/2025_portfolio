@@ -57,14 +57,14 @@ export default function Project() {
               style={{ width: '100%', height: 'auto', objectFit: 'cover' }}
               />
               <div className={styles.hoverLayer}>
-                <Link href={'/'}>Visit</Link>
+                <Link href={'https://2025-portfolio-coral.vercel.app/'}>Visit</Link>
                 <Link href={'https://github.com/JinwonShen/2025_portfoliio'}>github</Link>
               </div>
             </div>
           </div>
           <div className={styles.info}>
             <div className={styles.mobileLink}>
-              <Link href={'/'}>Visit</Link>
+              <Link href={'https://2025-portfolio-coral.vercel.app/'}>Visit</Link>
               <Link href={'https://github.com/JinwonShen/2025_portfoliio'}>github</Link>
             </div>
             <h2>포트폴리오</h2>
