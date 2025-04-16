@@ -3,7 +3,7 @@
 import styles from './GuestBook.module.scss'
 import { useState, useEffect } from 'react'
 import { collection, addDoc, getDocs, Timestamp } from 'firebase/firestore'
-import { db } from '@/llb/Firebase'
+import { db } from '../../lib/firebase'
 
 type Guest = {
   id: string
@@ -24,8 +24,8 @@ const loadGuestbook = async (setGuests: React.Dispatch<React.SetStateAction<Gues
     return {
       ...d,
       date: rawDate instanceof Timestamp
-      ? rawDate.toDate().toISOString().split('T')[0]
-      : String(rawDate),
+        ? rawDate.toDate().toISOString().split('T')[0]
+        : String(rawDate),
     }
   }) as Guest[]
 
@@ -63,16 +63,16 @@ export default function GuestBook() {
       <p>어떤 이야기든 좋아요 !</p>
 
       <form onSubmit={handleSubmit} className={styles.formContainer}>
-        <input 
-          type="text" 
-          placeholder="Your Name" 
-          value={name} 
-          onChange={(e) => setName(e.target.value)} 
+        <input
+          type="text"
+          placeholder="Your Name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
         />
-        <textarea 
-          placeholder="Message" 
-          value={message} 
-          onChange={(e) => setMessage(e.target.value)} 
+        <textarea
+          placeholder="Message"
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
         />
         <button type="submit">Submit</button>
       </form>

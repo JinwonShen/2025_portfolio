@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 
 import './globals.scss'
 import styles from './layout.module.scss'
-import { AnimatedGradient } from "@/app/AnimatedGradient";
+import { AnimatedGradient } from "./AnimatedGradient";
 import { IBM_Plex_Sans_KR, Exo, Exo_2  } from 'next/font/google'
-import Header from "@/components/Header/Header";
-import Social from "@/components/Social";
-import LenisProvider from "@/hooks/useLenis";
+import Header from "../components/Header/Header";
+import Social from "../components/Social";
+import LenisProvider from "../hooks/useLenis";
 
 // body
 const ibm = IBM_Plex_Sans_KR({
