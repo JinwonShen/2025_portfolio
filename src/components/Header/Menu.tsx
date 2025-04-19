@@ -46,18 +46,16 @@ export default function Menu() {
     <nav className={styles.menuContainer}>
       <ul>
         <li>
-          <button onClick={() => handleScrollTo("about")} type="button">About</button>
-          className={activeSection === 'about' ? styles.active : ''}
+          <button onClick={() => handleScrollTo("about")} type="button"
+            className={activeSection === 'about' ? styles.active : ''}>About</button>
           {/* <Link href={"/about"}>About</Link> */}
         </li>
         <li>
-          <button onClick={() => handleScrollTo("project")} type="button">Project</button>
-          className={activeSection === 'project' ? styles.active : ''}
+          <button onClick={() => handleScrollTo("project")} type="button" className={activeSection === 'project' ? styles.active : ''}>Project</button>
           {/* <Link href={"/project"}>Project</Link> */}
         </li>
         <li>
-          <button onClick={() => handleScrollTo("guestbook")} type="button">GuestBook</button>
-          className={activeSection === 'guestbook' ? styles.active : ''}
+          <button onClick={() => handleScrollTo("guestbook")} type="button" className={activeSection === 'guestbook' ? styles.active : ''}>GuestBook</button>
           {/* <Link href={"/guestbook"}>GuestBook</Link> */}
         </li>
       </ul>
