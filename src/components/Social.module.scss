@@ -42,6 +42,7 @@
 
 @media (max-width: var.$breakpoint-tablet) {
   .socialContainer {
+    width: calc(100% - 40px);
     position: relative;
     left: 40px;
     z-index: 1000;
