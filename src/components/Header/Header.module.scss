@@ -10,7 +10,7 @@
   height: 100vh;
   left: calc((100% - 1080px) / 2);
   padding: 96px 0;
-  z-index: 1000;
+  z-index: 2000;
 }
 
 @media (max-width: var.$breakpoint-tablet) {
