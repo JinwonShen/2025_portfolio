@@ -97,20 +97,17 @@
           transition: 0.3s;
         
           a {
-            padding: 6px;
+            padding: 6px 12px;
+            margin: 4px 0;
+            border-radius: 8px;
+            background-color: rgba(255, 255, 255, 0.5);
             font-family: var.$font-title;
             transform: translateY(10px);
             transition: all 0.3s;
-            &::after {
-              content: ' ↩︎';
-              opacity: 0;
-            }
 
             &:hover {
               color: #333;
-              &::after {
-              opacity: 1;
-            }
+              background-color: rgba(255, 255, 255, 1);
             }
           }
         }
