@@ -88,7 +88,7 @@
           border-radius: 8px;
           background-color: rgba(51,51,51,0.15); // 딤처리
           display: flex;
-          flex-direction: column;
+          // flex-direction: column;
           justify-content: center;
           align-items: center;
           // align-items: flex-start;
@@ -99,7 +99,7 @@
         
           a {
             padding: 6px 12px;
-            margin: 4px 0;
+            margin: 0 8px;
             border-radius: 8px;
             background-color: rgba(255, 255, 255, 0.5);
             font-family: var.$font-title;
