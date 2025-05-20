@@ -21,15 +21,23 @@ export default function Project() {
 									style={{ width: "100%", height: "auto", objectFit: "cover" }}
 								/>
 								<div className={styles.hoverLayer}>
-									<Link href={project.visit}>Visit</Link>
-									<Link href={project.github}>github</Link>
+									<Link href={project.visit} target="_blank">
+										Visit
+									</Link>
+									<Link href={project.github} target="_blank">
+										github
+									</Link>
 								</div>
 							</div>
 						</div>
 						<div className={styles.info}>
 							<div className={styles.mobileLink}>
-								<Link href={project.visit}>Visit</Link>
-								<Link href={project.github}>github</Link>
+								<Link href={project.visit} target="_blank">
+									Visit
+								</Link>
+								<Link href={project.github} target="_blank">
+									github
+								</Link>
 							</div>
 
 							<h2>{project.title}</h2>
