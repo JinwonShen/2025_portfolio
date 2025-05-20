@@ -132,10 +132,9 @@
 
     .projectCont {
       .imgCont {
-        &:hover:not(.imgCont) {
-          .hoverLayer {
-            opacity: 0;
-          }
+        &:hover .hoverLayer {
+          opacity: 0 !important;
+          backdrop-filter: none !important;
         }
       }
 
