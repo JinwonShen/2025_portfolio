@@ -1,26 +1,24 @@
 export const projects = [
 	{
 		id: "project1",
-		title: "모임통장(Moim) 예정",
-		image: "/images/project/project-newProject.png",
+		title: "모임통장(Moim)",
+		image: "/images/project/project-moim.png",
 		alt: "Moim(모임통장)",
-		visit:
-			"https://sjinwon.notion.site/Moim-1f2072ea8d35807ca46cdd517b4079ce?pvs=4",
+		visit: "https://moim-app.vercel.app/",
 		github: "https://github.com/JinwonShen/moim-app",
 		description:
-			"일상에서 친구, 가족, 동호회 등 여러명이 함께 비용을 모아 사용하는 경우가 빈번하지만, 이를 효율적으로 관리할 수 있는 디지털 도구는 매우 제한적입니다. 이를 해결하기 위해 모임 가계부 웹앱으로 모임 통장(Moim)을 기획부터 설계 개발까지 진행하고 있습니다.",
+			"친구, 가족, 동호회 등 여러 명이 함께 비용을 모으고 사용하는 상황에서, 자금 관리의 불편함을 해결하기 위해 개발한 공동 가계부 서비스입니다. 모임 개설부터 참여, 입금 및 지출 내역 관리, 통계 시각화까지 전 과정을 웹 기반으로 제공하며, UI/UX 기획부터 Firebase 연동까지 전 개발 과정을 직접 구현했습니다.",
 		skills: [
 			"React",
 			"TypeScript",
+			"Firebase (Auth, Firestore, Storage)",
+			"Zustand",
 			"Vercel",
-			"Firebase",
+			"Framer Motion",
+			"Chart.js",
+			"Luxon",
+			"Bcrypt.js",
 			"uuid",
-			"zustand",
-			"bcryptjs",
-			"react-chartjs-2",
-			"data-fns",
-			"luxon",
-			"Framer",
 		],
 	},
 	{
