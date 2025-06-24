@@ -1,23 +1,78 @@
 @use '../../styles/variables.module.scss' as var;
 
-.titleContainer h1 {
-  font-family: var.$font-title;
-  font-size: 3.5rem;
-  line-height: 3.5rem;
+.titleContainer {
+  h1 {
+    font-family: var.$font-title;
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+  }
+
+  h2 {
+    padding: 1rem 0 1rem;
+    font-family: var.$font-body;
+    font-weight: 600;
+    font-size: 1.25rem;
+  }
+
+  p {
+    font-family: var.$font-body;
+    font-size: 1rem;
+    padding-right: 96px;
+  }
+
+  section {
+    display: none;
+  }
 }
 
-.titleContainer h2 {
-  padding: 1rem 0 1rem;
-  font-family: var.$font-body;
-  font-weight: 600;
-  font-size: 1.25rem;
+// project Page 스타일 수정
+.projectPageTitle {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2, p {
+    display: none;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+
+    h3 {
+      margin: 16px 0;
+    }
+
+    .tagList {
+      display: flex;
+      flex-wrap: wrap;
+      padding-right: 12px;
+
+      button {
+        padding: 6px 12px;
+        border-radius: 8px;
+        background-color: rgba(255, 255, 255, 0.5);
+        margin: 4px;
+        font-family: var.$font-title, var.$font-body;
+        font-weight: 700;
+        font-size: 0.75rem;
+        transition: all 0.3s;
+
+        &:hover {
+          // background-color: rgba(51, 51, 51, 0.1);
+          background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        &.active {
+          background-color: rgba(255, 255, 255, 1);
+          // color: #6a85b6;
+          color: #333;
+        }
+      }
+    }
+  }
 }
 
-.titleContainer p {
-  font-family: var.$font-body;
-  font-size: 1rem;
-  padding-right: 96px;
-}
 
 @media (max-width: var.$breakpoint-tablet) {
   .titleContainer p {

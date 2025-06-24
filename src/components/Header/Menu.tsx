@@ -1,22 +1,24 @@
 "use client";
 
-import { useEffect, useState } from "react";
-// import Link from "next/link"
+import Link from "next/link";
+import { useEffect } from "react";
+import { useActiveSection } from "../../hooks/useActiveSection";
 import styles from "./Menu.module.scss";
 
 export default function Menu() {
-	const [activeSection, setActiveSection] = useState<string | null>(null);
+	const activeSection = useActiveSection((state) => state.activeSection);
+	const setActiveSection = useActiveSection((state) => state.setActiveSection);
 
 	const handleScrollTo = (id: string) => {
 		const element = document.getElementById(id);
 		if (!element) return;
 
 		element.scrollIntoView({ behavior: "smooth" });
+		setActiveSection(id);
 	};
 
 	useEffect(() => {
 		const sectionIds = ["about", "project", "guestbook"];
-
 		const observer = new IntersectionObserver(
 			(entries) => {
 				for (const entry of entries) {
@@ -28,19 +30,15 @@ export default function Menu() {
 			{ threshold: 0.3 },
 		);
 
-		// sectionIds.forEach((id) => {
-		//   const element = document.getElementById(id)
-		//   if(element) observer.observe(element)
-		// })
 		for (const id of sectionIds) {
-			const element = document.getElementById(id);
-			if (element) {
-				observer.observe(element);
+			const el = document.getElementById(id);
+			if (el) {
+				observer.observe(el);
 			}
 		}
 
 		return () => observer.disconnect();
-	}, []);
+	}, [setActiveSection]);
 
 	return (
 		<nav className={styles.menuContainer}>
@@ -53,7 +51,6 @@ export default function Menu() {
 					>
 						About
 					</button>
-					{/* <Link href={"/about"}>About</Link> */}
 				</li>
 				<li>
 					<button
@@ -61,9 +58,11 @@ export default function Menu() {
 						type="button"
 						className={activeSection === "project" ? styles.active : ""}
 					>
-						Project
+						<span>Project</span>
+						<span className={styles.more}>
+							<Link href="/Project">more</Link>
+						</span>
 					</button>
-					{/* <Link href={"/project"}>Project</Link> */}
 				</li>
 				<li>
 					<button
@@ -73,7 +72,6 @@ export default function Menu() {
 					>
 						GuestBook
 					</button>
-					{/* <Link href={"/guestbook"}>GuestBook</Link> */}
 				</li>
 			</ul>
 		</nav>

@@ -1,12 +1,6 @@
 @use '../styles/reset.scss';
 @use '../styles/variables.module.scss' as v;
 
-:root {
-  --font-ibm: 'IBM Plex Sans KR', sans-serif;
-  --font-kanit: 'Kanit', sans-serif;
-  --font-exo2: 'Exo 2', sans-serif;
-}
-
 html {
   font-size: clamp(12px, 1.5vw, 16px);
   width: 100%;
@@ -14,8 +8,6 @@ html {
 
 body {
   width: 100%;
-  // max-width: 100vw;
-  // overflow-x: hidden;
   overflow-y: auto;
   height: 100%;
   line-height: 1.6;
