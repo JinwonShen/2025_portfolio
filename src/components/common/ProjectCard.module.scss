@@ -1,6 +1,7 @@
 @use '../../styles/variables.module.scss' as var;
 
-.project {
+// 공통
+.projectMain {
   position: relative;
   margin-bottom: 96px;
 
@@ -44,10 +45,10 @@
     
       a {
         display: flex;
-        padding: 6px;
-        margin: 0 8px;
-        border-radius: 8px;
-        background-color: rgba(255, 255, 255, 0.7);
+        padding: 8px 16px;
+        background-color: rgba(255 , 255 , 255 , 1);
+        border: 1px solid rgba(51,51,51,0.1);
+        color: #333;
         font-family: var.$font-title;
         transform: translateY(10px);
         transition: all 0.3s;
@@ -57,8 +58,19 @@
         }
 
         &:hover {
-          color: #6a85b6;
-          background-color: rgba(255, 255, 255, 0.7);
+          color: #333;
+          background-color: rgb(240, 240, 240);
+        }
+
+        &:first-child {
+          border-top-left-radius: 8px;
+          border-bottom-left-radius: 8px;
+          border-right: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        &:last-child {
+          border-top-right-radius: 8px;
+          border-bottom-right-radius: 8px;
         }
       }
     }
@@ -115,18 +127,22 @@
 }
 
 @media (max-width: var.$breakpoint-tablet) {
-  .project {
-    
+  .projectMain {
+
     .imgCont {
 
-    &:hover .hoverLayer {
-      display: none;
-      opacity: 0 !important;
-      backdrop-filter: none !important;
+      &:hover .hoverLayer {
+        display: none;
+        opacity: 0 !important;
+        backdrop-filter: none !important;
+      }
     }
-  }
 
     .info {
+
+      .skills {
+        gap: 8px;
+      }
 
       .mobileLink {
         display: block;
@@ -161,6 +177,133 @@
           }
         }
       }
+    }
+  }
+}
+
+// Project 페이지 전용 컴포넌트 스타일링
+
+.projectPage {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  margin-bottom: 72px;
+
+  &:first-child {
+    padding-top: 118px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .imgCont {
+    flex: 1.25;
+    min-width: 0;
+
+    .imgBox {
+      display: flex;
+      flex-direction: column;
+      aspect-ratio: 16 / 9;
+      width: 100%;
+      // height: 100%;
+      // overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .hoverLayer {
+        width: 100%;
+        display: flex;
+        padding-top: 12px;
+
+        svg {
+          display: none;
+        }
+        
+        a {
+          width: 50%;
+          font-family: var.$font-title;
+          font-weight: 400;
+          font-size: 0.8rem;
+          padding: 8px 0;
+          background-color: rgba(255, 255, 255, 0.5);
+          text-align: center;
+          transition: all 0.3s;
+
+          &:first-child {
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+            border-right: 1px solid rgba(51,51,51,0.15);
+
+            &:hover {
+              background-color: rgba(255, 255, 255, 0.3);
+            }
+          }
+
+          &:last-child {
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+
+            &:hover {
+              background-color: rgba(255, 255, 255, 0.3);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .info {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h2 {
+      font-family: var.$font-body;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    p {
+      font-family: var.$font-body;
+      font-size: 0.9rem;
+      margin-bottom: 16px;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+
+      span {
+        border-radius: 8px;
+        font-family: var.$font-title;
+        font-size: 0.75rem;
+
+        &::before {
+          content: '#';
+        }
+      }
+    }
+
+    .mobileLink {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: var.$breakpoint-tablet) {
+  .projectPage {
+    &:first-child {
+      padding-top: 0;
     }
   }
 }

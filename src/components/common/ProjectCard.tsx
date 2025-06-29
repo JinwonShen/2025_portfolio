@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import styles from "./ProjectCard.module.scss";
 
 interface Project {
@@ -15,8 +18,13 @@ interface Project {
 }
 
 export default function ProjectCard({ project }: { project: Project }) {
+	const pathname = usePathname();
+	const isProjectPage = pathname === "/Project";
+
 	return (
-		<div className={styles.project}>
+		<div
+			className={`${isProjectPage ? styles.projectPage : styles.projectMain}`}
+		>
 			<div className={styles.imgCont}>
 				<div className={styles.imgBox}>
 					<Image
@@ -25,7 +33,7 @@ export default function ProjectCard({ project }: { project: Project }) {
 						width={0}
 						height={0}
 						sizes="100%"
-						style={{ width: "100%", height: "auto", objectFit: "cover" }}
+						style={{ width: "100%", height: "100%", objectFit: "cover" }}
 					/>
 					<div className={styles.hoverLayer}>
 						<Link href={project.visit} target="_blank">

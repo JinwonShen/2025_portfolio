@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 import { useActiveSection } from "../../hooks/useActiveSection";
 import styles from "./Menu.module.scss";
@@ -8,6 +9,7 @@ import styles from "./Menu.module.scss";
 export default function Menu() {
 	const activeSection = useActiveSection((state) => state.activeSection);
 	const setActiveSection = useActiveSection((state) => state.setActiveSection);
+	const pathname = usePathname();
 
 	const handleScrollTo = (id: string) => {
 		const element = document.getElementById(id);
@@ -18,6 +20,7 @@ export default function Menu() {
 	};
 
 	useEffect(() => {
+		console.log("current pathname: ", pathname);
 		const sectionIds = ["about", "project", "guestbook"];
 		const observer = new IntersectionObserver(
 			(entries) => {
@@ -37,8 +40,10 @@ export default function Menu() {
 			}
 		}
 
-		return () => observer.disconnect();
-	}, [setActiveSection]);
+		return () => {
+			observer.disconnect();
+		};
+	}, [setActiveSection, pathname]);
 
 	return (
 		<nav className={styles.menuContainer}>
