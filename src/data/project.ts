@@ -98,8 +98,8 @@ export const projects = [
 	{
 		id: "project4",
 		title: "알고리즘 앱 (AlgoNote)",
-		image: "/images/project/project-algonote.png",
-		alt: "알고리즘 웹앱",
+		image: "/images/project/toy-project-algonote.png",
+		alt: "알고리즘 웹앱 토이프로젝트",
 		visit: "https://algorithm-9r06nuwrx-jinwonshens-projects.vercel.app",
 		github: "https://github.com/JinwonShen/algorithm-app",
 		description:
@@ -122,6 +122,66 @@ export const projects = [
 			"#토이 프로젝트",
 			"#반응형",
 			"#배포 완료",
+		],
+	},
+	{
+		id: "project5",
+		title: "야구 게임 (Baseball Game)",
+		image: "/images/project/toy-project-baseball-game.png",
+		alt: "야구 게임 토이프로젝트",
+		visit:
+			"https://sjinwon.notion.site/toy-baseball-game-221072ea8d3580fe8d88c135d04de50c?source=copy_link",
+		github: "https://github.com/JinwonShen/baseball-game",
+		description:
+			"4자리 숫자를 맞추는 야구 게임입니다. 사용자는 중복되지 않은 숫자를 입력하여 스트라이크와 볼 개수를 통해 정답을 유추합니다. JavaScript 로직을 기반으로 DOM 조작, 이벤트 처리, 조건문, 반복문 등을 활용해 구현했습니다.",
+		skills: ["HTML", "CSS", "JavaScript", "DOM Manipulation"],
+		tags: [
+			"#Vanilla JavaScript",
+			"#토이 프로젝트",
+			"#입력 유효성 검사",
+			"#로직 구현",
+			"#반복문",
+			"#조건문",
+		],
+	},
+	{
+		id: "project6",
+		title: "벽돌깨기 게임 (Breakout Game)",
+		image: "/images/project/toy-project-breakout-game.png",
+		alt: "벽돌깨기 게임 토이프로젝트",
+		visit:
+			"https://sjinwon.notion.site/toy-breakout-game-221072ea8d358028a7cdc066dc4f8893?source=copy_link",
+		github: "https://github.com/JinwonShen/breakout-game",
+		description:
+			"Canvas API를 활용한 2D 벽돌깨기 게임입니다. 공과 패들, 벽돌을 그리고 충돌 감지를 통해 게임 로직을 구성했으며, 점수 및 생명 시스템과 함께 객체 지향적으로 옵션을 설정해 다양한 상황을 구현할 수 있도록 구성했습니다.",
+		skills: ["HTML", "CSS", "JavaScript", "Canvas API", "OOP"],
+		tags: [
+			"#Vanilla JavaScript",
+			"#Canvas",
+			"#게임 로직",
+			"#토이 프로젝트",
+			"#객체지향",
+			"#충돌 감지",
+		],
+	},
+	{
+		id: "project7",
+		title: "계산기 (Calculator)",
+		image: "/images/project/toy-project-calculator.png",
+		alt: "계산기 토이프로젝트",
+		visit:
+			"https://sjinwon.notion.site/toy-Calculator-221072ea8d35808d9a42cc7e6bebd4a5?source=copy_link",
+		github: "https://github.com/JinwonShen/calculator",
+		description:
+			"JavaScript와 DOM 조작을 기반으로 한 기본 계산기 구현 프로젝트입니다. 연산자 입력 시 연속 계산, C/AC 기능, 사칙연산 우선순위 처리를 고려하였고, 사용자 입력 흐름에 따른 UI 상태 관리와 에러 핸들링 로직도 포함되어 있습니다.",
+		skills: ["HTML", "CSS", "JavaScript", "DOM 조작"],
+		tags: [
+			"#Vanilla JavaScript",
+			"#DOM 조작",
+			"#계산기",
+			"#토이 프로젝트",
+			"#상태 관리",
+			"#입력 흐름 처리",
 		],
 	},
 ];
