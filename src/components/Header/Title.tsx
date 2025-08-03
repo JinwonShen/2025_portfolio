@@ -41,7 +41,7 @@ export default function Title() {
 					<span>JINWON SHEN</span>
 				</Link>
 			</h1>
-			<h2>UI Engineer</h2>
+			<h2>Front-end Engineer</h2>
 			<p>
 				디자인 감각과 사용자 경험에 대한 깊은 이해를 바탕으로, 퍼블리싱과
 				프론트엔드 까지 아우르는 하이브리드형 인재입니다. 기획부터 디자인,
