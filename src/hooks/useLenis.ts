@@ -9,7 +9,7 @@ let lenisInstance: Lenis | null = null;
 export const getLenisInstance = () => lenisInstance;
 
 export default function LenisProvider() {
-	const rafRef = useRef<number | undefined>();
+	const rafRef = useRef<number | undefined>(undefined);
 
 	useEffect(() => {
 		const lenis = new Lenis({
