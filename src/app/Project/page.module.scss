@@ -6,9 +6,11 @@
   right: 0;
   width: 50%;
   max-width: 540px;
-  height: 100%;
+  min-height: 100vh; /* height: 100% 대신 min-height: 100vh 사용 */
   display: flex;
   flex-direction: column;
+  overflow-y: auto; /* 내용이 길 경우 스크롤 허용 */
+  padding-bottom: 48px; /* 하단 여백 추가 */
 
   section {
     padding-bottom: 96px;

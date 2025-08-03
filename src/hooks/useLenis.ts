@@ -1,26 +1,40 @@
-'use client';
+"use client";
 
-import { useEffect } from "react";
 import Lenis from "@studio-freight/lenis";
+import { useEffect, useRef } from "react";
+
+// Lenis 인스턴스를 전역에서 접근 가능하도록 설정
+let lenisInstance: Lenis | null = null;
+
+export const getLenisInstance = () => lenisInstance;
 
 export default function LenisProvider() {
-  useEffect(() => {
-    const lenis = new Lenis({
-      lerp: 0.1,
-      smoothWheel: true,
-    })
+	const rafRef = useRef<number>();
 
-    function raf(time: number) {
-      lenis.raf(time)
-      requestAnimationFrame(raf)
-    }
+	useEffect(() => {
+		const lenis = new Lenis({
+			lerp: 0.1,
+			smoothWheel: true,
+			duration: 1.2, // 스크롤 애니메이션 지속 시간
+		});
 
-    requestAnimationFrame(raf)
+		lenisInstance = lenis;
 
-    return () => {
-      lenis.destroy()
-    }
-  }, [])
+		function raf(time: number) {
+			lenis.raf(time);
+			rafRef.current = requestAnimationFrame(raf);
+		}
 
-  return null
+		rafRef.current = requestAnimationFrame(raf);
+
+		return () => {
+			if (rafRef.current) {
+				cancelAnimationFrame(rafRef.current);
+			}
+			lenis.destroy();
+			lenisInstance = null;
+		};
+	}, []);
+
+	return null;
 }
