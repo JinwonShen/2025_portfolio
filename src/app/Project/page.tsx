@@ -29,7 +29,7 @@ export default function ProjectPage() {
 					// Lenis가 없는 경우 일반 스크롤
 					window.scrollTo(0, 0);
 				}
-			} catch (error) {
+			} catch {
 				// 에러 발생 시 기본 스크롤
 				window.scrollTo(0, 0);
 			}
