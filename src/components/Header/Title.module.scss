@@ -99,12 +99,16 @@
 
 
 @media (max-width: var.$breakpoint-tablet) {
-  .titleContainer p {
-    padding-right: 0;
+  .titleContainer {
+    .profileSection {
+      .description {
+        padding-right: 0;
+      }
+    }
   }
 
   .projectPageTitle {
-    section {
+    .tagsSection {
       .tagList {
         padding: 0;
       }

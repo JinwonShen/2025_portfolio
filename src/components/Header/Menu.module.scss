@@ -69,11 +69,13 @@
     position: fixed;
     display: flex;
     justify-content: center;
+    align-items: start;
     width: 100%;
     max-width: 100vw;
+    height: 50px;
     left: 0;
     top: 0;
-    padding: 12px 0;
+    padding: 16px 0;
     box-sizing: border-box;
     backdrop-filter: blur(10px);
     z-index: 100;
@@ -83,14 +85,15 @@
       gap: 24px;
 
       li {
-        flex-direction: column;
+        button {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: center;
+        }
         
         .more {
-          position: absolute;
-          top: 40px;
-          left: 47%;
-          transform: translateX(-53%);
-          margin: 0 auto !important;
+          margin: 16px 0 0 0 !important;
           
           a {
             padding: 4px 12px;

@@ -15,6 +15,7 @@
 @media (max-width: var.$breakpoint-tablet) {
   .container {
     width: 100%;
+    max-width: 100%;
     padding-bottom: 24px; /* 모바일에서는 패딩 조정 */
   }
 }
