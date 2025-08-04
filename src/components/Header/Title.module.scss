@@ -13,16 +13,18 @@
     }
   }
 
-  h2 {
-    padding: 1rem 0 1rem;
-    font-family: var.$font-body;
-    font-weight: 600;
-    font-size: 1.25rem;
-  }
-
   p {
     font-family: var.$font-body;
+  }
+
+  .subtitle {
+    padding: 1rem 0 1rem;
+    font-weight: 600;
     font-size: 1rem;
+  }
+
+  .description {
+    font-size: 0.875rem;
     padding-right: 96px;
   }
 
@@ -40,6 +42,7 @@
     a {
       display: flex;
       align-items: center;
+      margin-bottom: 16px;
 
       .prev {
         display: block;

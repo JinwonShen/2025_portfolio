@@ -33,6 +33,60 @@ export default function Menu() {
 		setActiveSection(id);
 	};
 
+	// 키보드 네비게이션 처리
+	const handleKeyDown = (
+		event: React.KeyboardEvent,
+		currentIndex: number,
+		sectionId: string,
+	) => {
+		const menuItems = ["about", "project", "guestbook"];
+
+		switch (event.key) {
+			case "ArrowDown":
+			case "ArrowRight": {
+				event.preventDefault();
+				const nextIndex = (currentIndex + 1) % menuItems.length;
+				const nextButton = document.querySelector(
+					`[data-menu-item="${menuItems[nextIndex]}"]`,
+				) as HTMLButtonElement;
+				nextButton?.focus();
+				break;
+			}
+			case "ArrowUp":
+			case "ArrowLeft": {
+				event.preventDefault();
+				const prevIndex =
+					(currentIndex - 1 + menuItems.length) % menuItems.length;
+				const prevButton = document.querySelector(
+					`[data-menu-item="${menuItems[prevIndex]}"]`,
+				) as HTMLButtonElement;
+				prevButton?.focus();
+				break;
+			}
+			case "Enter":
+			case " ":
+				event.preventDefault();
+				handleScrollTo(sectionId);
+				break;
+			case "Home": {
+				event.preventDefault();
+				const firstButton = document.querySelector(
+					`[data-menu-item="${menuItems[0]}"]`,
+				) as HTMLButtonElement;
+				firstButton?.focus();
+				break;
+			}
+			case "End": {
+				event.preventDefault();
+				const lastButton = document.querySelector(
+					`[data-menu-item="${menuItems[menuItems.length - 1]}"]`,
+				) as HTMLButtonElement;
+				lastButton?.focus();
+				break;
+			}
+		}
+	};
+
 	useEffect(() => {
 		console.log("current pathname: ", pathname);
 		const sectionIds = ["about", "project", "guestbook"];
@@ -149,13 +203,18 @@ export default function Menu() {
 	}, [setActiveSection, pathname, activeSection]);
 
 	return (
-		<nav className={styles.menuContainer}>
+		<nav className={styles.menuContainer} aria-label="메인 네비게이션">
 			<ul>
 				<li>
 					<button
 						onClick={() => handleScrollTo("about")}
+						onKeyDown={(e) => handleKeyDown(e, 0, "about")}
 						type="button"
 						className={activeSection === "about" ? styles.active : ""}
+						aria-current={activeSection === "about" ? "page" : undefined}
+						aria-label="소개 섹션으로 이동"
+						data-menu-item="about"
+						tabIndex={activeSection === "about" ? 0 : -1}
 					>
 						About
 					</button>
@@ -163,20 +222,38 @@ export default function Menu() {
 				<li>
 					<button
 						onClick={() => handleScrollTo("project")}
+						onKeyDown={(e) => handleKeyDown(e, 1, "project")}
 						type="button"
 						className={activeSection === "project" ? styles.active : ""}
+						aria-current={activeSection === "project" ? "page" : undefined}
+						aria-label="프로젝트 섹션으로 이동"
+						aria-describedby="project-more-link"
+						data-menu-item="project"
+						tabIndex={activeSection === "project" ? 0 : -1}
 					>
 						<span>Project</span>
 						<span className={styles.more}>
-							<Link href="/Project">more</Link>
+							<Link
+								href="/Project"
+								id="project-more-link"
+								aria-label="프로젝트 상세 페이지로 이동"
+								tabIndex={0}
+							>
+								more
+							</Link>
 						</span>
 					</button>
 				</li>
 				<li>
 					<button
 						onClick={() => handleScrollTo("guestbook")}
+						onKeyDown={(e) => handleKeyDown(e, 2, "guestbook")}
 						type="button"
 						className={activeSection === "guestbook" ? styles.active : ""}
+						aria-current={activeSection === "guestbook" ? "page" : undefined}
+						aria-label="방명록 섹션으로 이동"
+						data-menu-item="guestbook"
+						tabIndex={activeSection === "guestbook" ? 0 : -1}
 					>
 						GuestBook
 					</button>

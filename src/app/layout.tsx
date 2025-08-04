@@ -32,34 +32,46 @@ const exo2 = Exo_2({
 });
 
 export const metadata: Metadata = {
-	title: "JINWON SHEN - Frontend Engineer",
-	description: "프론트엔드 개발자 JINWON SHEN의 포트폴리오 사이트입니다.",
+	title: "JINWON SHEN - Web Publisher & Frontend Developer",
+	description:
+		"웹 표준과 접근성을 준수하는 퍼블리셔이자 프론트엔드 개발자 JINWON SHEN의 포트폴리오 사이트입니다.",
 	keywords: [
 		"JINWON SHEN",
 		"포트폴리오",
+		"웹 퍼블리셔",
+		"퍼블리싱",
 		"프론트엔드 개발자",
+		"Web Publisher",
 		"Frontend Developer",
-		"Frontend Engineer",
+		"웹 표준",
+		"접근성",
+		"HTML5",
+		"CSS3",
+		"시맨틱 마크업",
+		"반응형 웹",
+		"크로스브라우징",
 	],
 	authors: [{ name: "Jinwon Shen" }],
 	openGraph: {
-		title: "JINWON SHEN - Frontend Engineer",
-		description: "프론트엔드 개발자 JINWON SHEN의 포트폴리오입니다.",
+		title: "JINWON SHEN - Web Publisher & Frontend Developer",
+		description:
+			"웹 표준과 접근성을 준수하는 퍼블리셔이자 프론트엔드 개발자 JINWON SHEN의 포트폴리오입니다.",
 		url: "https://jinwondev.vercel.app",
 		images: [
 			{
 				url: "https://jinwondev.vercel.app/og-image.png",
 				width: 1200,
 				height: 630,
-				alt: "Jinwon Shen Portfolio",
+				alt: "Jinwon Shen Portfolio - Web Publisher & Frontend Developer",
 			},
 		],
 		type: "website",
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: "JINWON SHEN - Frontend Engineer",
-		description: "프론트엔드 개발자 JINWON SHEN의 포트폴리오입니다.",
+		title: "JINWON SHEN - Web Publisher & Frontend Developer",
+		description:
+			"웹 표준과 접근성을 준수하는 퍼블리셔이자 프론트엔드 개발자 JINWON SHEN의 포트폴리오입니다.",
 		images: ["https://jinwondev.vercel.app/og-image.png"],
 	},
 	metadataBase: new URL("https://jinwondev.vercel.app"),
@@ -74,12 +86,16 @@ export default function RootLayout({
 			className={`${ibm.variable} ${exo.variable} ${exo2.variable}`}
 		>
 			<body>
+				{/* Skip Navigation for Accessibility */}
+				<a href="#main-content" className="skip-nav">
+					메인 콘텐츠로 바로가기
+				</a>
 				<LenisProvider />
 				<AnimatedGradient />
 				<Header />
 				<Social />
 				<div className={styles.wrapper}>
-					<main>{children}</main>
+					<main id="main-content">{children}</main>
 				</div>
 			</body>
 		</html>

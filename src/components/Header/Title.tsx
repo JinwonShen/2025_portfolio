@@ -15,58 +15,62 @@ export default function Title() {
 	const { selectedTag, setSelectedTag } = useProjectTagStore();
 
 	return (
-		<div
+		<header
 			className={`${styles.titleContainer} ${
 				isProjectPage ? styles.projectPageTitle : ""
 			}`}
 		>
-			<h1>
-				<Link href="/" onClick={() => setActiveSection("about")}>
-					<span className={styles.prev}>
-						<svg
-							role="img"
-							viewBox="0 0 24 24"
-							width={30}
-							height={30}
-							xmlns="http://www.w3.org/2000/svg"
-						>
-							<title>prev</title>
-							<path
-								d="M19 12a1 1 0 0 1-1 1H8.414l1.293 1.293a1 1 0 0 1-1.414 1.414l-3-3a1 1 0 0 1 0-1.414l3-3a1 1 0 0 1 1.414 1.414L8.414 11H18a1 1 0 0 1 1 1z"
-								fill="currentColor"
-								data-name="Left"
-							/>
-						</svg>
-					</span>
-					<span>JINWON SHEN</span>
-				</Link>
-			</h1>
-			<h2>Front-end Engineer</h2>
-			<p>
-				디자인 감각과 사용자 경험에 대한 깊은 이해를 바탕으로, 퍼블리싱과
-				프론트엔드 까지 아우르는 하이브리드형 인재입니다. 기획부터 디자인,
-				개발까지 모든 과정에 유연하게 참여하며 사용자에게 더 나은 경험을
-				제공하는 것을 목표로 하고있습니다.
-			</p>
-			<section
-				className={`${styles.titleContainer} ${
-					isProjectPage ? styles.projectPageTitle : ""
-				}`}
-			>
-				<h3># Tags</h3>
-				<aside className={styles.tagList}>
-					{tagList.map((tag) => (
-						<button
-							type="button"
-							key={tag}
-							className={tag === selectedTag ? styles.active : ""}
-							onClick={() => setSelectedTag(tag)}
-						>
-							{tag}
-						</button>
-					))}
-				</aside>
-			</section>
-		</div>
+			<div className={styles.profileSection}>
+				<h1>
+					<Link href="/" onClick={() => setActiveSection("about")}>
+						{isProjectPage && (
+							<span className={styles.prev} aria-hidden="true">
+								<svg
+									viewBox="0 0 24 24"
+									width={30}
+									height={30}
+									xmlns="http://www.w3.org/2000/svg"
+									aria-hidden="true"
+								>
+									<path
+										d="M19 12a1 1 0 0 1-1 1H8.414l1.293 1.293a1 1 0 0 1-1.414 1.414l-3-3a1 1 0 0 1 0-1.414l3-3a1 1 0 0 1 1.414 1.414L8.414 11H18a1 1 0 0 1 1 1z"
+										fill="currentColor"
+									/>
+								</svg>
+							</span>
+						)}
+						<span className={styles.title}>JINWON SHEN</span>
+					</Link>
+				</h1>
+				<p className={styles.subtitle}>Web Publisher & Frontend Developer</p>
+				<p className={styles.description}>
+					디자인과 개발 사이의 간극을 좁히고, 의도를 정확하게 구현하는
+					퍼블리셔입니다. 웹 표준과 접근성을 준수하며, 작지만 정밀한 마크업으로
+					프로젝트의 완성도를 높이는 것을 목표로 합니다. 협업에서는 피드백을
+					적극 수용하며, 디자이너와 개발자 사이의 소통을 원활하게 연결하는
+					역할을 담당합니다.
+				</p>
+			</div>
+
+			{isProjectPage && (
+				<section className={styles.tagsSection} aria-labelledby="project-tags">
+					<h2 id="project-tags"># Tags</h2>
+					<fieldset className={styles.tagList} aria-label="프로젝트 태그 필터">
+						{tagList.map((tag) => (
+							<button
+								type="button"
+								key={tag}
+								className={tag === selectedTag ? styles.active : ""}
+								onClick={() => setSelectedTag(tag)}
+								aria-pressed={tag === selectedTag}
+								aria-label={`${tag} 태그로 필터링`}
+							>
+								{tag}
+							</button>
+						))}
+					</fieldset>
+				</section>
+			)}
+		</header>
 	);
 }
