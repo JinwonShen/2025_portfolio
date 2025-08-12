@@ -26,7 +26,7 @@ export default function Project() {
 			</h1>
 			<div className={styles.projectCont}>
 				{projects
-					.filter((project) => project.tags.includes("#개인 프로젝트"))
+					.filter((project) => project.tags.includes("#메인 프로젝트"))
 					.map((project) => (
 						<ProjectCard key={project.id} project={project} />
 					))}
