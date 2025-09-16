@@ -115,10 +115,10 @@ body {
   background-color: #ffffff;
 }
 
-/* Focus indicators with better contrast */
+/* Focus indicators with better contrast - 내부 border 방식 */
 *:focus-visible {
-  outline: 2px solid var(--color-focus);
-  outline-offset: 2px;
+  outline: none;
+  border: 2px solid var(--color-focus) !important;
 }
 
 button:focus-visible,
@@ -126,8 +126,13 @@ a:focus-visible,
 input:focus-visible,
 select:focus-visible,
 textarea:focus-visible {
-  outline: 2px solid var(--color-focus);
-  outline-offset: 2px;
+  outline: none;
+  border: 2px solid var(--color-focus) !important;
+}
+
+/* 기본 border 제거 */
+button, input, select, textarea {
+  border: 1px solid transparent;
 }
 
 /* Enhanced focus management */

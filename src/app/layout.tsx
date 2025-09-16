@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import { Exo, Exo_2, IBM_Plex_Sans_KR } from "next/font/google";
 import Header from "../components/Header/Header";
+import SkipNavigation from "../components/SkipNavigation";
 import Social from "../components/Social";
 import LenisProvider from "../hooks/useLenis";
 import { AnimatedGradient } from "./AnimatedGradient";
@@ -87,19 +88,7 @@ export default function RootLayout({
 		>
 			<body>
 				{/* Skip Navigation for Accessibility */}
-				<button
-					type="button"
-					className="skip-nav"
-					onClick={() => {
-						const mainContent = document.getElementById("main-content");
-						if (mainContent) {
-							mainContent.focus();
-							mainContent.scrollIntoView({ behavior: "smooth" });
-						}
-					}}
-				>
-					메인 콘텐츠로 바로가기
-				</button>
+				<SkipNavigation />
 				<LenisProvider />
 				<AnimatedGradient />
 				<Header />
