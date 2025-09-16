@@ -87,15 +87,25 @@ export default function RootLayout({
 		>
 			<body>
 				{/* Skip Navigation for Accessibility */}
-				<a href="#main-content" className="skip-nav">
+				<button
+					type="button"
+					className="skip-nav"
+					onClick={() => {
+						const mainContent = document.getElementById("main-content");
+						if (mainContent) {
+							mainContent.focus();
+							mainContent.scrollIntoView({ behavior: "smooth" });
+						}
+					}}
+				>
 					메인 콘텐츠로 바로가기
-				</a>
+				</button>
 				<LenisProvider />
 				<AnimatedGradient />
 				<Header />
 				<Social />
 				<div className={styles.wrapper}>
-					<main id="main-content" tabIndex={-1}>
+					<main id="main-content" tabIndex={-1} style={{ outline: "none" }}>
 						{children}
 					</main>
 				</div>
