@@ -22,7 +22,11 @@ export default function Title() {
 		>
 			<div className={styles.profileSection}>
 				<h1>
-					<Link href="/" onClick={() => setActiveSection("about")}>
+					<Link
+						href="/"
+						onClick={() => setActiveSection("about")}
+						aria-label="JINWON SHEN - 홈으로 이동"
+					>
 						{isProjectPage && (
 							<span className={styles.prev} aria-hidden="true">
 								<svg
@@ -32,6 +36,7 @@ export default function Title() {
 									xmlns="http://www.w3.org/2000/svg"
 									aria-hidden="true"
 								>
+									<title>뒤로가기</title>
 									<path
 										d="M19 12a1 1 0 0 1-1 1H8.414l1.293 1.293a1 1 0 0 1-1.414 1.414l-3-3a1 1 0 0 1 0-1.414l3-3a1 1 0 0 1 1.414 1.414L8.414 11H18a1 1 0 0 1 1 1z"
 										fill="currentColor"

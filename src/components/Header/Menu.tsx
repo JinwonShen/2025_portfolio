@@ -84,6 +84,13 @@ export default function Menu() {
 				lastButton?.focus();
 				break;
 			}
+			case "Escape": {
+				event.preventDefault();
+				// 메뉴에서 포커스를 제거하고 메인 콘텐츠로 이동
+				const mainContent = document.getElementById("main-content");
+				mainContent?.focus();
+				break;
+			}
 		}
 	};
 
