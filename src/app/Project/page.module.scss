@@ -20,6 +20,7 @@
 @media (max-width: var.$breakpoint-tablet) {
   .container {
     width: 100%;
+    max-width: none;
     
     section {
       padding: 0 24px 48px;
