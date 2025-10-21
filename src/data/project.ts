@@ -4,7 +4,6 @@ export const projects = [
 		title: "라이브 스터디(LiveStudy)",
 		image: "/images/project/project-live-study.png",
 		alt: "라이브스터디(화상 채팅 스터디방)",
-		visit: "https://live-study.com",
 		notion:
 			"https://www.notion.so/sjinwon/LiveStudy-248072ea8d3580f0aa3ec46cbaf67624?source=copy_link",
 		github: "https://github.com/LiveStudy-group",
