@@ -12,7 +12,7 @@ export default function Project() {
 		>
 			<h2 id="project-heading">
 				<Link href={"Project"} aria-label="프로젝트 섹션 - 상세 페이지로 이동">
-					<span>Project</span>
+					<span>Project →</span>
 					<svg
 						role="img"
 						viewBox="0 0 20 20"
