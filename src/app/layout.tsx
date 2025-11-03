@@ -33,17 +33,19 @@ const exo2 = Exo_2({
 });
 
 export const metadata: Metadata = {
-	title: "JINWON SHEN - Web Publisher & Frontend Developer",
+	title: "JINWON SHEN - Web Designer & Publisher",
 	description:
-		"웹 표준과 접근성을 준수하는 퍼블리셔이자 프론트엔드 개발자 JINWON SHEN의 포트폴리오 사이트입니다.",
+		"웹 표준과 접근성을 준수하는 웹 디자이너이자 퍼블리셔 JINWON SHEN의 포트폴리오 사이트입니다.",
 	keywords: [
 		"JINWON SHEN",
 		"포트폴리오",
 		"웹 퍼블리셔",
 		"퍼블리싱",
-		"프론트엔드 개발자",
+		"웹 디자이너",
+		"UI Design",
 		"Web Publisher",
-		"Frontend Developer",
+		"UI/UX",
+		"Web Designer",
 		"웹 표준",
 		"접근성",
 		"HTML5",
