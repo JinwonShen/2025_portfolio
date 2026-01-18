@@ -47,9 +47,9 @@ export default function Title() {
 						<span className={styles.title}>JINWON SHEN</span>
 					</Link>
 				</h1>
-				<p className={styles.subtitle}>Web Designer & Publisher</p>
+				<p className={styles.subtitle}>UI Designer & Publisher</p>
 				<p className={styles.description}>
-					디자인과 개발 사이의 간극을 좁히고, 의도를 정확하게 구현하는
+					디자인과 개발 사이의 간극을 좁히고, 의도를 정확하게 구현하는 UI
 					디자이너이자 퍼블리셔입니다. 웹 표준과 접근성을 준수하며, 작지만
 					정밀한 마크업으로 프로젝트의 완성도를 높이는 것을 목표로 합니다.
 					협업에서는 피드백을 적극 수용하며, 디자이너와 개발자 사이의 소통을
