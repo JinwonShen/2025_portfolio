@@ -5,7 +5,7 @@ export const projects = [
 		image: "/images/project/project-live-study.png",
 		alt: "라이브스터디(화상 채팅 스터디방)",
 		notion:
-			"https://www.notion.so/sjinwon/LiveStudy-248072ea8d3580f0aa3ec46cbaf67624?source=copy_link",
+			"https://www.notion.so/sjinwon/LiveStudy-Team-277072ea8d35812f8a38cbf6278f1d98?source=copy_link",
 		github: "https://github.com/LiveStudy-group",
 		description:
 			"링크없이 즉시 참여하는 오픈형 실시간 스터디 서비스 LiveStudy입니다. 하나의 스터디룸에 최대 20명을 수용하며, 소리없는 화상채팅을 시작으로, 신호등 UI, 텍스트 채팅으로 방해하거나 받지않는 조용한 소통이 가능합니다. 자동 방 배정과, 출석/칭호/좋아요 보상으로 스터디 참여의 재미를 더했습니다.",
@@ -45,7 +45,7 @@ export const projects = [
 		alt: "Moim(모임통장)",
 		visit: "https://moim-app.vercel.app/",
 		notion:
-			"https://sjinwon.notion.site/Moim-1f2072ea8d35807ca46cdd517b4079ce?source=copy_link",
+			"https://www.notion.so/sjinwon/Moim-277072ea8d358158bc70da786d74a751?source=copy_link",
 		github: "https://github.com/JinwonShen/moim-app",
 		description:
 			"친구, 가족, 동호회 등 여러 명이 함께 비용을 모으고 사용하는 상황에서, 자금 관리의 불편함을 해결하기 위해 개발한 공동 가계부 서비스입니다. 모임 개설부터 참여, 입금 및 지출 내역 관리, 통계 시각화까지 전 과정을 웹 기반으로 제공하며, UI/UX 기획부터 Firebase 연동까지 전 개발 과정을 직접 구현했습니다.",
@@ -79,39 +79,15 @@ export const projects = [
 			"#메인 프로젝트",
 		],
 	},
+
 	{
 		id: "project3",
-		title: "포트폴리오",
-		image: "/images/project/project-portfolio.png",
-		alt: "진원 포트폴리오",
-		visit: "https://jinwondev.vercel.app/",
-		notion:
-			"https://sjinwon.notion.site/2025-FE-Engineer-Portfolio-1f0072ea8d3580d7b6c8ece7f8030f35?source=copy_link",
-		github: "https://github.com/JinwonShen/2025_portfoliio",
-		description:
-			"포트폴리오 사이트입니다. 레이아웃을 절반으로 나누어 좌측의 헤더영역 우측의 컨텐츠 영역으로 구분해 사이트를 이용할 수 있습니다. About, Project, Guestbook 세 가지 메뉴로 구성되어 있습니다.",
-		skills: ["React", "TypeScript", "Next.js", "Vercel", "Firebase"],
-		tags: [
-			"#React",
-			"#TypeScript",
-			"#Next.js",
-			"#Vercel",
-			"#Firebase",
-			"#포트폴리오",
-			"#개인 프로젝트",
-			"#반응형",
-			"#배포 완료",
-			"#메인 프로젝트",
-		],
-	},
-	{
-		id: "project4",
 		title: "진원상사 웹 (jinwon-corporation)",
 		image: "/images/project/project-jinwoncorporation.png",
 		alt: "진원상사 반응형 웹",
 		visit: "https://jinwoncorporation.com",
 		notion:
-			"https://sjinwon.notion.site/1f0072ea8d35809c8f75d966c72fcf83?source=copy_link",
+			"https://www.notion.so/sjinwon/277072ea8d3581a784e3f19dd7d92b40?source=copy_link",
 		github: "https://github.com/JinwonShen/jinwon-corporation",
 		description:
 			"23년간 비닐 가공을 전문으로 해온 진원상사의 기업 웹사이트를 직접 설계 및 개발했습니다. B2B 위주의 고객층을 대상으로 회사의 신뢰도와 전문성을 전달하고자 했고, 제품 정보 및 맞춤 제작 문의를 원활하게 받을 수 있도록 반응형 웹사이트로서 구현했습니다.",
@@ -140,6 +116,31 @@ export const projects = [
 			"#개인 프로젝트",
 			"#반응형",
 			"#배포 완료",
+			"#메인 프로젝트",
+		],
+	},
+	{
+		id: "project4",
+		title: "포트폴리오",
+		image: "/images/project/project-portfolio.png",
+		alt: "진원 포트폴리오",
+		visit: "https://jinwondev.vercel.app/",
+		notion:
+			"https://www.notion.so/sjinwon/2025-FE-Engineer-Portfolio-277072ea8d3581c88849d1da36fa3569?source=copy_link",
+		github: "https://github.com/JinwonShen/2025_portfoliio",
+		description:
+			"포트폴리오 사이트입니다. 레이아웃을 절반으로 나누어 좌측의 헤더영역 우측의 컨텐츠 영역으로 구분해 사이트를 이용할 수 있습니다. About, Project, Guestbook 세 가지 메뉴로 구성되어 있습니다.",
+		skills: ["React", "TypeScript", "Next.js", "Vercel", "Firebase"],
+		tags: [
+			"#React",
+			"#TypeScript",
+			"#Next.js",
+			"#Vercel",
+			"#Firebase",
+			"#포트폴리오",
+			"#개인 프로젝트",
+			"#반응형",
+			"#배포 완료",
 		],
 	},
 	{
@@ -148,8 +149,6 @@ export const projects = [
 		image: "/images/project/toy-project-algonote.png",
 		alt: "알고리즘 웹앱 토이프로젝트",
 		visit: "https://algorithm-9r06nuwrx-jinwonshens-projects.vercel.app",
-		notion:
-			"https://sjinwon.notion.site/toy-AlgoNote-1f0072ea8d35802597f4cdd73df7b2ae?source=copy_link",
 		github: "https://github.com/JinwonShen/algorithm-app",
 		description:
 			"알고리즘 문제를 풀고, 직접 코드를 실행하고, 내 푼 문제를 저장해 확인할 수 있는 개인 맞춤형 문제풀이 앱입니다. 사용자의 입력에 따라 문제 목록을 실시간으로 필터링하고, 검색하고 저장할 수 있습니다.",
@@ -178,8 +177,6 @@ export const projects = [
 		title: "야구 게임 (Baseball Game)",
 		image: "/images/project/toy-project-baseball-game.png",
 		alt: "야구 게임 토이프로젝트",
-		notion:
-			"https://sjinwon.notion.site/toy-baseball-game-221072ea8d3580fe8d88c135d04de50c?source=copy_link",
 		github: "https://github.com/JinwonShen/baseball-game",
 		description:
 			"4자리 숫자를 맞추는 야구 게임입니다. 사용자는 중복되지 않은 숫자를 입력하여 스트라이크와 볼 개수를 통해 정답을 유추합니다. JavaScript 로직을 기반으로 DOM 조작, 이벤트 처리, 조건문, 반복문 등을 활용해 구현했습니다.",
@@ -198,8 +195,6 @@ export const projects = [
 		title: "벽돌깨기 게임 (Breakout Game)",
 		image: "/images/project/toy-project-breakout-game.png",
 		alt: "벽돌깨기 게임 토이프로젝트",
-		notion:
-			"https://sjinwon.notion.site/toy-breakout-game-221072ea8d358028a7cdc066dc4f8893?source=copy_link",
 		github: "https://github.com/JinwonShen/breakout-game",
 		description:
 			"Canvas API를 활용한 2D 벽돌깨기 게임입니다. 공과 패들, 벽돌을 그리고 충돌 감지를 통해 게임 로직을 구성했으며, 점수 및 생명 시스템과 함께 객체 지향적으로 옵션을 설정해 다양한 상황을 구현할 수 있도록 구성했습니다.",
@@ -218,8 +213,6 @@ export const projects = [
 		title: "계산기 (Calculator)",
 		image: "/images/project/toy-project-calculator.png",
 		alt: "계산기 토이프로젝트",
-		notion:
-			"https://sjinwon.notion.site/toy-Calculator-221072ea8d35808d9a42cc7e6bebd4a5?source=copy_link",
 		github: "https://github.com/JinwonShen/calculator",
 		description:
 			"JavaScript와 DOM 조작을 기반으로 한 기본 계산기 구현 프로젝트입니다. 연산자 입력 시 연속 계산, C/AC 기능, 사칙연산 우선순위 처리를 고려하였고, 사용자 입력 흐름에 따른 UI 상태 관리와 에러 핸들링 로직도 포함되어 있습니다.",
