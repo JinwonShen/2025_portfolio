@@ -47,13 +47,15 @@ export default function Title() {
 						<span className={styles.title}>JINWON SHEN</span>
 					</Link>
 				</h1>
-				<p className={styles.subtitle}>UI Designer & Publisher</p>
+				<p className={styles.subtitle}> • UI Designer · Front-end Projects</p>
 				<p className={styles.description}>
-					디자인과 개발 사이의 간극을 좁히고, 의도를 정확하게 구현하는 UI
-					디자이너이자 퍼블리셔입니다. 웹 표준과 접근성을 준수하며, 작지만
-					정밀한 마크업으로 프로젝트의 완성도를 높이는 것을 목표로 합니다.
-					협업에서는 피드백을 적극 수용하며, 디자이너와 개발자 사이의 소통을
-					원활하게 연결하는 역할이 강점이라 말할 수 있습니다.
+					저는 화면을 새로 만드는 일보다, 이미 존재하는 구조와 흐름을 이해하고
+					더 명확하게 정리하는 과정을 중요하게 생각합니다. <br />
+					<br />
+					기능이 많아질수록 UI는 복잡해지기 쉽다고 느꼈고, 사용자가 고민하지
+					않아도 되는 화면을 만드는 것이 UI 디자이너의 역할이라고 생각합니다.
+					그래서 디자인 과정에서는 보이는 결과물보다 구조, 흐름, 사용 맥락을
+					먼저 정리하는 방식으로 문제를 바라보고 있습니다
 				</p>
 			</div>
 
